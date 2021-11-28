@@ -72,3 +72,14 @@ t.string :email, :null => false
 
 <!-- Mailer -->
 rails g mailer Password reset
+
+<!-- Rails console for token -->
+<!-- official documentation -->
+https://github.com/rails/globalid
+
+user.signed_id 
+user.to_global_id 
+user.to_global_id.to_s
+user.signed_id(expires_in: 15.minutes)
+user.signed_id(expires_in: 15.minutes, purpose: "password reset")
+
